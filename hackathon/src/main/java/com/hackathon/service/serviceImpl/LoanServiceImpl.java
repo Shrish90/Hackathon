@@ -1,5 +1,8 @@
 package com.hackathon.service.serviceImpl;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -49,8 +52,6 @@ public class LoanServiceImpl implements LoanService{
 		}
 		if(isEligible) {
 			loanDao.persistLoan(loanApplication);
-		}else {
-			
 		}
 		return isEligible;
 	}
@@ -63,8 +64,15 @@ public class LoanServiceImpl implements LoanService{
 			return loanDao.getLoanAmountByPassport(passport);
 		}
 	public int calculateAgeByDob(Date dob) {
-		
-		return 33;
+		  Calendar c = Calendar.getInstance();
+		  c.setTime(dob);
+		  int year = c.get(Calendar.YEAR);
+		  int month = c.get(Calendar.MONTH) + 1;
+		  int date = c.get(Calendar.DATE);
+		  LocalDate l1 = LocalDate.of(year, month, date);
+		  LocalDate now1 = LocalDate.now();
+		  Period diff1 = Period.between(l1, now1);
+		  return diff1.getYears();
 	}
 	
 }

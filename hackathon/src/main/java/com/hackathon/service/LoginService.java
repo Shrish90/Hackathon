@@ -5,8 +5,20 @@ import org.springframework.stereotype.Service;
 import com.exceptions.AuthException;
 import com.hackathon.models.User;
 
+/**
+ * This is the service responsible for login related services.
+ * @author kiranavk
+ *
+ */
 @Service
 public class LoginService {
+	
+	/**
+	 * This method validates the user by verifying his username and password
+	 * @param user
+	 * @return String LoginResult
+	 * @throws AuthException
+	 */
 	public String validateUser(User user) throws AuthException {
 		String username = user.getUserName();
 		String password = user.getPassword();

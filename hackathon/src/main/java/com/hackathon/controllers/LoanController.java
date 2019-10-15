@@ -49,7 +49,8 @@ private static final Logger logger = LoggerFactory.getLogger(LoanController.clas
 public ResponseEntity<Map<String,String>> Loans(@Valid @RequestBody LoanApplication loanApplicationObj){
 	
 	Map<String,String> result = new HashMap<>();
-	logger.info("****RUNNING*****"+ loanApplicationObj);
+	logger.info("****Loan Application*****"+ loanApplicationObj);
+	loanService.loanApplicationService(loanApplicationObj);
 	result.put("root", "working fine");
 	return new ResponseEntity<>(result, HttpStatus.OK);
 }

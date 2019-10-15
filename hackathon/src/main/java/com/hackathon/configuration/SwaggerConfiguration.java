@@ -57,7 +57,7 @@ public class SwaggerConfiguration {
 	}
 
 	private Predicate<String> getPaths() {
-		return Predicates.or(PathSelectors.regex("/login"), PathSelectors.regex("/"));
+		return Predicates.or(PathSelectors.regex("/login"), PathSelectors.regex("/"),PathSelectors.regex("/api/loans"));
 	}
 
 	private ApiInfo getApiInfo() {

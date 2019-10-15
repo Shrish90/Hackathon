@@ -1,5 +1,7 @@
 package com.hackathon.DAO;
 
-public interface LoanDAO {
+import com.hackathon.model.LoanApplication;
 
+public interface LoanDAO {
+	public boolean persistLoan(LoanApplication loanApplication);
 }

@@ -2,6 +2,8 @@ package com.hackathon.model;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
 * <h1>User Details Modal </h1>
 * This is the Modal Class for User Details
@@ -16,6 +18,7 @@ public class User {
 	private String lastName;
 	private String address;
 	private String citizenship;
+	@JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
 	private Date dateOfBirth;
 	private String phoneNumber;
 	private String emailId;

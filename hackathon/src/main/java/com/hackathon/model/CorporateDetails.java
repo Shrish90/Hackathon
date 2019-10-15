@@ -11,10 +11,19 @@ package com.hackathon.model;
 public class CorporateDetails {
 
 	private String name;
+	
 	private String corporateAddress;
 	private Double revenue;
 	private String regNo;
+	private int companyAge;
 	
+	
+	public int getCompanyAge() {
+		return companyAge;
+	}
+	public void setCompanyAge(int companyAge) {
+		this.companyAge = companyAge;
+	}
 	public String getName() {
 		return name;
 	}

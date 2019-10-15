@@ -22,6 +22,13 @@ import com.hackathon.service.LoanService;
 @Service
 public class LoanServiceImpl implements LoanService{
 	private static final Logger logger = LoggerFactory.getLogger(LoanServiceImpl.class);
+	
+	/**
+	 * This method is used to collect Account details coming from Controller
+	 * and verify for loan amount if eligible
+	 * @param Takes LoanApplication Object from Controller
+	 * @return boolean value to state a success or failure
+	 */
 
 	@Override
 	public boolean loanApplicationService(LoanApplication loanApplication) {

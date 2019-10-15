@@ -1,6 +1,6 @@
 package com.hackathon.models;
 
-public class User {
+public class UserRequest {
 	private String userName;
 	private String password;
 	

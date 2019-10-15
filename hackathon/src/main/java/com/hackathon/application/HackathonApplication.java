@@ -3,7 +3,7 @@ package com.hackathon.application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com.hackathon.*"})
+@SpringBootApplication(scanBasePackages = {"com.*"})
 public class HackathonApplication {
 
 	public static void main(String[] args) {

@@ -17,7 +17,7 @@ import com.hackathon.service.LoginService;
  *
  */
 @RestController
-@CrossOrigin(origins = {"http://52.66.211.71:4200", "http://52.66.211.71:4200"})
+@CrossOrigin(origins = {"http://52.66.211.71:4200", "http://localhost:4200"})
 public class LoginController {
 	
 	@Autowired

@@ -1,7 +1,9 @@
 package com.hackathon.serviceimpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//import com.hackathon.daoimpl.UserDAOImpl;
 import com.hackathon.exceptions.AuthException;
 import com.hackathon.models.UserRequest;
 import com.hackathon.service.LoginService;
@@ -9,6 +11,9 @@ import com.hackathon.service.LoginService;
 @Service
 public class LoginServiceImpl implements LoginService {
 
+//	@Autowired
+//	public UserDAOImpl userDAOImpl;
+	
 	/**
 	 * This method validates the user by verifying his username and password
 	 * @param user
@@ -27,6 +32,8 @@ public class LoginServiceImpl implements LoginService {
 		if(!"kiran".equalsIgnoreCase(username) || !"avk".equalsIgnoreCase(password)) {
 			throw new AuthException("Username or Password is invalid.");
 		}
+//		userDAOImpl.existsById(1);
+		
 		return "success";
 	}
 }

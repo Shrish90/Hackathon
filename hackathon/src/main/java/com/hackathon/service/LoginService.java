@@ -2,8 +2,8 @@ package com.hackathon.service;
 
 import org.springframework.stereotype.Service;
 
-import com.exceptions.AuthException;
-import com.hackathon.models.User;
+import com.hackathon.exceptions.AuthException;
+import com.hackathon.models.UserRequest;
 
 /**
  * This is the service responsible for login related services.
@@ -19,7 +19,7 @@ public class LoginService {
 	 * @return String LoginResult
 	 * @throws AuthException
 	 */
-	public String validateUser(User user) throws AuthException {
+	public String validateUser(UserRequest user) throws AuthException {
 		String username = user.getUserName();
 		String password = user.getPassword();
 		if(username == null || "".equals(username)) {

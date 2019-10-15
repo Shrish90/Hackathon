@@ -29,9 +29,7 @@ public class SwaggerConfiguration {
 	@Bean
 	public Docket postApi() {
 		return new Docket(DocumentationType.SWAGGER_2).groupName("hackathon-api")
-				.apiInfo(getApiInfo()).select()
-//				.paths(getPaths())
-				.build()
+				.apiInfo(getApiInfo()).select().paths(getPaths()).build()
 				.securityContexts(Lists.newArrayList(getSecurityContext()))
 				.securitySchemes(Lists.newArrayList(getApiKey()));
 	}
@@ -59,7 +57,7 @@ public class SwaggerConfiguration {
 	}
 
 	private Predicate<String> getPaths() {
-		return Predicates.or(PathSelectors.regex("/*"), PathSelectors.regex("/*"));
+		return Predicates.or(PathSelectors.regex("/login"), PathSelectors.regex("/"));
 	}
 
 	private ApiInfo getApiInfo() {

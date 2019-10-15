@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hackathon.model.LoanApplication;
+import com.hackathon.service.LoanService;
 
 /**
 * <h1>Apply Loan Controller </h1>
@@ -27,12 +29,14 @@ import com.hackathon.model.LoanApplication;
 * @since   2019-10-15
 */
 @RestController
-@RequestMapping("/Loan")
+@RequestMapping("/api")
 @CrossOrigin("*")
 public class LoanController {
 
 private static final Logger logger = LoggerFactory.getLogger(LoanController.class);
 
+	@Autowired
+	LoanService loanService;
 
 /**
  * This method is used to collect Account details coming from UI
@@ -43,6 +47,7 @@ private static final Logger logger = LoggerFactory.getLogger(LoanController.clas
 
 @RequestMapping(value = "/loans", method = RequestMethod.POST)
 public ResponseEntity<Map<String,String>> Loans(@Valid @RequestBody LoanApplication loanApplicationObj){
+	
 	Map<String,String> result = new HashMap<>();
 	logger.info("****RUNNING*****"+ loanApplicationObj);
 	result.put("root", "working fine");

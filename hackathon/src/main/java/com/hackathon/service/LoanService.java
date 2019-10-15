@@ -1,5 +1,7 @@
 package com.hackathon.service;
 
-public interface LoanService {
+import com.hackathon.model.LoanApplication;
 
+public interface LoanService {
+	public String loanApplicationService(LoanApplication loanApplication);
 }

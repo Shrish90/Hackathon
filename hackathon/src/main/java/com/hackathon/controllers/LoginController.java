@@ -1,6 +1,7 @@
 package com.hackathon.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +17,7 @@ import com.hackathon.service.LoginService;
  *
  */
 @RestController
+@CrossOrigin(origins = {"http://52.66.211.71:4200", "http://localhost:4200"})
 public class LoginController {
 	
 	@Autowired

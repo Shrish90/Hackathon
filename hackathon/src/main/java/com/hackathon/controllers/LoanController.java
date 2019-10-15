@@ -27,11 +27,11 @@ import com.hackathon.model.LoanApplication;
 * @since   2019-10-15
 */
 @RestController
-@RequestMapping("/ApplyLoan")
+@RequestMapping("/Loan")
 @CrossOrigin("*")
-public class ApplyLoanController {
+public class LoanController {
 
-private static final Logger logger = LoggerFactory.getLogger(ApplyLoanController.class);
+private static final Logger logger = LoggerFactory.getLogger(LoanController.class);
 
 
 /**
@@ -41,7 +41,7 @@ private static final Logger logger = LoggerFactory.getLogger(ApplyLoanController
  * @return Map which holds information about status of application
  */
 
-@RequestMapping(value = "/verify", method = RequestMethod.POST)
+@RequestMapping(value = "/", method = RequestMethod.POST)
 public ResponseEntity<Map<String,String>> ApplyLoan(@Valid @RequestBody LoanApplication loanApplicationObj){
 	Map<String,String> result = new HashMap<>();
 	logger.info("****RUNNING*****");

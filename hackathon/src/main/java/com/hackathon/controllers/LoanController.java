@@ -41,10 +41,10 @@ private static final Logger logger = LoggerFactory.getLogger(LoanController.clas
  * @return Map which holds information about status of application
  */
 
-@RequestMapping(value = "/", method = RequestMethod.POST)
-public ResponseEntity<Map<String,String>> ApplyLoan(@Valid @RequestBody LoanApplication loanApplicationObj){
+@RequestMapping(value = "/loans", method = RequestMethod.POST)
+public ResponseEntity<Map<String,String>> Loans(@Valid @RequestBody LoanApplication loanApplicationObj){
 	Map<String,String> result = new HashMap<>();
-	logger.info("****RUNNING*****");
+	logger.info("****RUNNING*****"+ loanApplicationObj);
 	result.put("root", "working fine");
 	return new ResponseEntity<>(result, HttpStatus.OK);
 }

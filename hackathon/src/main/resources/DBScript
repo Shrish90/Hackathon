@@ -1,5 +1,5 @@
 CREATE TABLE `aven`.`loandetails` (
-  `loadid` INT ,
+  `loadid` INT AUTO_INCREMENT,
   `loantype` VARCHAR(50)  ,
   `amount` DOUBLE ,
   `rate` DOUBLE ,
@@ -7,9 +7,10 @@ CREATE TABLE `aven`.`loandetails` (
   `userid` INT, 
   PRIMARY KEY (`loadid`) )
   ENGINE = InnoDB;
-
-CREATE TABLE `aven`.`userdetails` (
-  `userid` INT  ,
+  
+  
+  CREATE TABLE `aven`.`userdetails` (
+  `userid` INT AUTO_INCREMENT,
   `name` VARCHAR(100)  ,
   `address` VARCHAR(250)  ,
   `dob` DATE ,
@@ -20,10 +21,8 @@ CREATE TABLE `aven`.`userdetails` (
   `citizenship` VARCHAR(50) ,
   PRIMARY KEY (`userid`) )
 ENGINE = InnoDB;
-
-
 CREATE TABLE `aven`.`companydetails` (
-  `cid` INT   ,
+  `cid` INT AUTO_INCREMENT,
   `cname` VARCHAR(100)  ,
   `caddress` VARCHAR(250)  ,
   `cregisterno` VARCHAR(30) ,

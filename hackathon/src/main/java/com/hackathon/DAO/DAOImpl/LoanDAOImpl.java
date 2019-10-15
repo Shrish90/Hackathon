@@ -11,6 +11,18 @@ import org.springframework.stereotype.Repository;
 import com.hackathon.DAO.LoanDAO;
 import com.hackathon.model.LoanApplication;
 
+/**
+* <h1>Loan DAO</h1>
+* This is the DAO to take the loan details from Service
+* and persist in db
+* 
+*
+* @author  Shrish Tiwari
+* @version 1.0
+* @since   2019-10-15
+*/
+
+
 @Repository
 public class LoanDAOImpl implements LoanDAO{
 	private static final Logger logger = LoggerFactory.getLogger(LoanDAOImpl.class);

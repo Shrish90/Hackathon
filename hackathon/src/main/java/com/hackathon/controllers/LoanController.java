@@ -51,7 +51,7 @@ public ResponseEntity<Map<String,String>> Loans(@Valid @RequestBody LoanApplicat
 	Map<String,String> result = new HashMap<>();
 	logger.info("****Loan Application*****"+ loanApplicationObj);
 	loanService.loanApplicationService(loanApplicationObj);
-	result.put("root", "working fine");
+	result.put("status", loanService.loanApplicationService(loanApplicationObj)+"");
 	return new ResponseEntity<>(result, HttpStatus.OK);
 }
 

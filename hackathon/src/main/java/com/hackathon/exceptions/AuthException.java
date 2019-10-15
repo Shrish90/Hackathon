@@ -1,4 +1,4 @@
-package com.exceptions;
+package com.hackathon.exceptions;
 
 /**
  * This is the exception that is thrown when login fails.

@@ -46,11 +46,13 @@ public class LoanDAOImpl implements LoanDAO{
 	
 	public int getUserIdByPassport(String passport) {
 		List<Map<String,Object>> userId = jdbcTemplate.queryForList(get_userid_query, passport);
+		logger.info("getuserIdByPassport called" + passport);
 		return Integer.parseInt(userId.get(0).get("userId")+"");
 	}
 	
 	public int getCompanyIdByRegNo(String regNo) {
 		List<Map<String,Object>> cId = jdbcTemplate.queryForList(get_companyid_query, regNo);
+		logger.info("getCompanyIdByRegNo called" + regNo);
 		return Integer.parseInt(cId.get(0).get("cid")+"");	
 	}
 

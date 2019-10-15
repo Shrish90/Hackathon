@@ -1,0 +1,32 @@
+CREATE TABLE `aven`.`loandetails` (
+  `loadid` INT ,
+  `loantype` VARCHAR(50)  ,
+  `amount` DOUBLE ,
+  `rate` DOUBLE ,
+  `cid` INT ,
+  `userid` INT, 
+  PRIMARY KEY (`loadid`) )
+  ENGINE = InnoDB;
+
+CREATE TABLE `aven`.`userdetails` (
+  `userid` INT  ,
+  `name` VARCHAR(100)  ,
+  `address` VARCHAR(250)  ,
+  `dob` DATE ,
+  `mobile` VARCHAR(20) ,
+  `emailid` VARCHAR(100) ,
+  `passport` VARCHAR(50) ,
+  `password` VARCHAR(50) ,
+  `citizenship` VARCHAR(50) ,
+  PRIMARY KEY (`userid`) )
+ENGINE = InnoDB;
+
+
+CREATE TABLE `aven`.`companydetails` (
+  `cid` INT   ,
+  `cname` VARCHAR(100)  ,
+  `caddress` VARCHAR(250)  ,
+  `cregisterno` VARCHAR(30) ,
+  `crevenue` DOUBLE ,
+  PRIMARY KEY (`cid`) )
+ENGINE = InnoDB;

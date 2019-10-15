@@ -56,21 +56,15 @@ public class LoanServiceImpl implements LoanService{
 	}
 	
 	public Double getLoanAmountByRegNo(String regNo) {
-		
-		return 1500.00;
+		return loanDao.getLoanAmountByRegNo(regNo);
 	}
 	
 	public Double getLoanAmountPassport(String passport) {
-			
-			return 1500.00;
+			return loanDao.getLoanAmountByPassport(passport);
 		}
 	public int calculateAgeByDob(Date dob) {
 		
 		return 33;
 	}
 	
-	public String persistLoanApplication() {
-		
-		return null;
-	}
 }

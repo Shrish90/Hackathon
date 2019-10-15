@@ -4,8 +4,10 @@ import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.hackathon.DAO.LoanDAO;
 import com.hackathon.model.LoanApplication;
 import com.hackathon.service.LoanService;
 
@@ -21,6 +23,10 @@ import com.hackathon.service.LoanService;
 
 @Service
 public class LoanServiceImpl implements LoanService{
+	
+	@Autowired
+	LoanDAO loanDao;
+	
 	private static final Logger logger = LoggerFactory.getLogger(LoanServiceImpl.class);
 	
 	/**
@@ -41,21 +47,30 @@ public class LoanServiceImpl implements LoanService{
 			logger.info("Validation fails due to business logic error");
 			isEligible = false;
 		}
-		
+		if(isEligible) {
+			loanDao.persistLoan(loanApplication);
+		}else {
+			
+		}
 		return isEligible;
 	}
 	
 	public Double getLoanAmountByRegNo(String regNo) {
 		
-		return null;
+		return 1500.00;
 	}
 	
 	public Double getLoanAmountPassport(String passport) {
 			
-			return null;
+			return 1500.00;
 		}
 	public int calculateAgeByDob(Date dob) {
-		return 0;
+		
+		return 33;
 	}
 	
+	public String persistLoanApplication() {
+		
+		return null;
+	}
 }

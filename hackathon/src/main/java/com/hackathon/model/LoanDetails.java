@@ -9,5 +9,29 @@ package com.hackathon.model;
 * @since   2019-10-15
 */
 public class LoanDetails {
-
+	
+	private Double amount;
+	private int term;
+	private String usage;
+	
+	public Double getAmount() {
+		return amount;
+	}
+	public void setAmount(Double amount) {
+		this.amount = amount;
+	}
+	public int getTerm() {
+		return term;
+	}
+	public void setTerm(int term) {
+		this.term = term;
+	}
+	public String getUsage() {
+		return usage;
+	}
+	public void setUsage(String usage) {
+		this.usage = usage;
+	}
+	
+	
 }
